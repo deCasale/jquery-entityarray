@@ -1,4 +1,4 @@
-jquery-entityarray
-==================
+jquery.entityarray.js
+=====================
 
-jQuery plugin for tag like multiselect
+jQuery plugin for tag like multiselect.
