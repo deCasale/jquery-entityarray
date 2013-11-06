@@ -16,11 +16,18 @@ module.exports = function (grunt) {
         src: 'src/<%= pkg.name %>.js',
         dest: 'dist/<%= pkg.name %>.min.js'
       }
+    },
+    cssmin: {
+      minify: {
+        src: 'src/<%= pkg.name %>.css',
+        dest: 'dist/<%= pkg.name %>.min.css'
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', ['jshint', 'uglify']);
 
