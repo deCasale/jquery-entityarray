@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery.entityarray.js - demo</title>
+
+	<link rel="stylesheet" type="text/css" href="../dist/jquery.entityarray.min.css">
+	<script type="text/javascript" src="../lib/js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="../dist/jquery.entityarray.min.js"></script>
+</head>
+<body>
+
+<section>
+	<h1>Basic array</h1>
+
+	<div id="basic"></div>
+
+	<script type="text/javascript">
+		$(function () {
+
+			$("#basic").entityArray({
+				entities: [
+					{
+						id: 1,
+						name: 'Peter'
+					},
+					{
+						id: 2,
+						name: 'Paul'
+					},
+					{
+						id: 3,
+						name: 'Catherine'
+					}
+				]
+			});
+
+		});
+	</script>
+</section>
+
+<section>
+	<h1>Basic array</h1>
+
+	<div id="entity-array"></div>
+
+	<script type="text/javascript">
+		$(function () {
+
+			$("#entity-array").entityArray({
+				entities: [
+					{
+						id: 1,
+						name: 'Peter'
+					},
+					{
+						id: 2,
+						name: 'Paul'
+					},
+					{
+						id: 3,
+						name: 'Catherine'
+					}
+				]
+			});
+
+		});
+	</script>
+</section>
+
+
+</body>
+</html>
