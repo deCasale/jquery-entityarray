@@ -8,6 +8,16 @@ module.exports = function (grunt) {
         src: 'src/<%= pkg.name %>.js'
       }
     },
+    jasmine: {
+      entityarray: {
+        src: 'src/*.js'
+      },
+      options: {
+        vendor: 'lib/*/*.js',
+        specs: 'spec/*Spec.js',
+        helpers: 'spec/helpers/*.js'
+      }
+    },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -26,9 +36,10 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'jasmine', 'uglify', 'cssmin']);
 
 };
